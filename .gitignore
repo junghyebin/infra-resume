@@ -1,0 +1,13 @@
+# AWS 자격 증명
+.aws/
+*.pem
+credentials
+*.csv
+
+# 환경 변수
+.env
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+.vscode/
