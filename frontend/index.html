@@ -4,120 +4,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="정혜빈 | 인프라·보안 엔지니어 포트폴리오">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>정혜빈 | 이력서</title>
+    <title>정혜빈 | 포트폴리오</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>정혜빈</h1>
-        <p>제조 현장 시스템을 개발·운영한 경험을 바탕으로, 안정적이고 안전한 IT 인프라를 만드는 인프라·보안 엔지니어를 준비하고 있습니다.</p>
-        <nav>
+    <!-- ===== 상단 캡슐형 내비게이션 ===== -->
+    <header class="site-header">
+        <nav class="nav-pill" aria-label="주요 메뉴">
+            <a href="#top" class="nav-logo">HB</a>
             <ul>
                 <li><a href="#about">소개</a></li>
                 <li><a href="#skills">기술</a></li>
-                <li><a href="#experience">경력</a></li>
                 <li><a href="#projects">프로젝트</a></li>
-                <li><a href="#certifications">자격증</a></li>
+                <li><a href="#experience">경력</a></li>
                 <li><a href="#education">교육</a></li>
+                <li><a href="#contact">연락처</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="top">
 
+        <!-- ===== 히어로 ===== -->
+        <section class="hero">
+            <p class="eyebrow"><span class="status-dot"></span>Infra · Security Engineer</p>
+            <h1>안녕하세요,<br><span class="gradient-text">정혜빈</span>입니다.</h1>
+            <p class="hero-lead">제조 현장 시스템을 개발·운영한 경험을 바탕으로, 안정적이고 안전한 IT 인프라를 만드는 인프라·보안 엔지니어를 준비하고 있습니다.</p>
+            <div class="hero-links">
+                <a class="btn btn-primary" href="https://github.com/junghyebin" target="_blank" rel="noopener">GitHub ↗</a>
+                <!--<a class="btn btn-ghost" href="https://bini94-tech.tistory.com" target="_blank" rel="noopener">Tistory 블로그 ↗</a>-->
+                <a class="btn btn-ghost" href="mailto:bini_94@naver.com">Email</a>
+            </div>
+        </section>
+
+        <!-- ===== 소개 ===== -->
         <section id="about">
-            <h2>소개</h2>
-            <p>WMS(창고관리시스템)와 MES(제조실행시스템)를 3년 10개월간 개발·운영하며, 장애가 생기면 추측보다 로그와 데이터로 원인을 좁혀가는 방식을 익혔습니다.</p>
-            <p>고객사의 랜섬웨어 사고를 겪으며 보안 사고가 업무 연속성에 주는 영향을 체감했고, IT 환경을 안전하게 지키고 운영하는 일로 전문성을 넓히고 있습니다.</p>
+            <div class="section-head">
+                <span class="section-label">01 · About</span>
+                <h2>소개</h2>
+            </div>
+            <div class="grid grid-3">
+                <article class="card card-wide">
+                    <p>WMS(창고관리시스템)와 MES(제조실행시스템)를 3년 10개월간 개발·운영하며, 장애가 생기면 추측보다 로그와 데이터로 원인을 좁혀가는 방식을 익혔습니다.</p>
+                    <p>고객사의 랜섬웨어 사고를 겪으며 보안 사고가 업무 연속성에 주는 영향을 체감했고, IT 환경을 안전하게 지키고 운영하는 일로 전문성을 넓히고 있습니다.</p>
+                </article>
+                <article class="card stat-card">
+                    <p class="stat-num">3<small>년</small> 10<small>개월</small></p>
+                    <p class="stat-label">WMS·MES 개발·운영 경력</p>
+                </article>
+            </div>
         </section>
 
+        <!-- ===== 기술 스택 ===== -->
         <section id="skills">
-            <h2>기술</h2>
-            <h3>인프라·클라우드</h3>
-            <ul>
-                <li>Linux, 서버·네트워크 기초</li>
-                <li>AWS (IAM, S3, RDS 등)</li>
-                <li>VMware 가상머신 구성</li>
-            </ul>
-            <h3>개발·운영</h3>
-            <ul>
-                <li>C#, React, DevExtreme, Kotlin(Android), MSSQL</li>
-                <li>GitLab, Jenkins, GitHub</li>
-            </ul>
+            <div class="section-head">
+                <span class="section-label">02 · Skills</span>
+                <h2>기술 스택</h2>
+            </div>
+            <div class="grid grid-2">
+                <article class="card">
+                    <h3>Cloud &amp; Infra</h3>
+                    <ul class="tags">
+                        <li>AWS</li>
+                        <li>IAM</li>
+                        <li>S3</li>
+                        <li>RDS</li>
+                        <li>Docker</li>
+                        <li>K8s</li>
+                        <li>VMware</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>OS / Server</h3>
+                    <ul class="tags">
+                        <li>Linux</li>
+                        <li>서버 기초</li>
+                        <li>네트워크 기초</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>Language / Framework</h3>
+                    <ul class="tags">
+                        <li>C#</li>
+                        <li>React</li>
+                        <li>DevExtreme</li>
+                        <li>Kotlin (Android)</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3>DB / Tools</h3>
+                    <ul class="tags">
+                        <li>MSSQL</li>
+                        <li>GitLab</li>
+                        <li>Jenkins</li>
+                        <li>GitHub</li>
+                        <li>Obsidian</li>
+                    </ul>
+                </article>
+            </div>
         </section>
 
-        <section id="experience">
-            <h2>경력</h2>
-            <article>
-                <h3>포메이션랩스(주) R&amp;D팀</h3>
-                <p><time datetime="2022-04">2022.04</time> – <time datetime="2026-01">2026.01</time> (3년 10개월)</p>
-                <h4>창고 관리 시스템(WMS) 운영·유지보수</h4>
-                <ul>
-                    <li>현장 작업자용 PDA(Android) 및 Web 화면 개발·유지보수</li>
-                    <li>현장 단말기 적용을 위한 Android APK 빌드 및 배포</li>
-                    <li>DB History 테이블 역추적으로 재고 불일치 원인 규명</li>
-                </ul>
-                <h4>제조 운영 시스템(MES) 운영·유지보수</h4>
-                <ul>
-                    <li>공구·설비·생산 관리 시스템 DB 초기 세팅 및 Web 화면 개발</li>
-                    <li>GitLab 소스 관리, Jenkins 기반 운영 환경 배포</li>
-                    <li>DB 메일 기능을 활용한 실시간 장애 알림 환경 구축</li>
-                </ul>
-                <h4>사내 운영 효율화</h4>
-                <ul>
-                    <li>Obsidian 기반 팀 기술 블로그 구축 및 트러블슈팅 사례 문서화</li>
-                    <li>공통 UI 템플릿 표준화 참여</li>
-                </ul>
-            </article>
-        </section>
-
+        <!-- ===== 프로젝트 ===== -->
         <section id="projects">
-            <h2>프로젝트</h2>
-            <article>
-                <h3>Cloud Resume Challenge</h3>
-                <p>지금 보고 있는 이 이력서 사이트를 AWS 위에 직접 구축하는 프로젝트입니다. 정적 웹사이트 호스팅, HTTPS, 서버리스 방문자 카운터, IaC, CI/CD까지 단계별로 진행하고
-                    있습니다.</p>
-            </article>
-            <article>
-                <h3>하이브리드 DR 인프라 구축 (KT Cloud 기본 프로젝트, 팀)</h3>
-                <p>2026.10 완료</p>
-                <p>내용 추가 예정</p>
-                <!-- TODO: 역할·기술·성과 상세 추가 -->
-            </article>
-
-            <article>
-                <h3>해커톤</h3>
-                <p>내용 추가 예정</p>
-                <!-- TODO: 대회명, 날짜, 만든 것, 역할, 결과 -->
-            </article>
+            <div class="section-head">
+                <span class="section-label">03 · Projects</span>
+                <h2>프로젝트</h2>
+            </div>
+            <div class="grid grid-2">
+                <article class="card project-card featured">
+                    <div class="card-top">
+                        <span class="badge">Team · KT Cloud</span>
+                        <span class="meta"><time datetime="2026-10">2026.10</time> 완료</span>
+                    </div>
+                    <h3>Beaver 하이브리드 클라우드 DR 아키텍처</h3>
+                    <p>KT Cloud 기본 프로젝트(팀)로 진행한 하이브리드 재해복구(DR) 인프라 구축 프로젝트입니다.</p>
+                    <p class="muted">상세 내용 추가 예정</p>
+                    <!-- TODO: 역할·기술·성과 상세 추가 -->
+                    <ul class="tags tags-sm">
+                        <li>Hybrid Cloud</li>
+                        <li>DR</li>
+                    </ul>
+                </article>
+                <article class="card project-card featured">
+                    <div class="card-top">
+                        <span class="badge">Personal · AWS</span>
+                        <span class="meta">진행 중</span>
+                    </div>
+                    <h3>Cloud Resume Challenge</h3>
+                    <p>지금 보고 있는 이 이력서 사이트를 AWS 위에 직접 구축하는 프로젝트입니다. 정적 웹사이트 호스팅, HTTPS, 서버리스 방문자 카운터, IaC, CI/CD까지 단계별로 진행하고 있습니다.</p>
+                    <ul class="tags tags-sm">
+                        <li>S3</li>
+                        <li>Serverless</li>
+                        <li>IaC</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </article>
+                <article class="card project-card">
+                    <div class="card-top">
+                        <span class="badge">Hackathon</span>
+                    </div>
+                    <h3>해커톤</h3>
+                    <p class="muted">내용 추가 예정</p>
+                    <!-- TODO: 대회명, 날짜, 만든 것, 역할, 결과 -->
+                </article>
+            </div>
         </section>
 
-        <section id="certifications">
-            <h2>자격증</h2>
-            <ul>
-                <li>정보처리기사 (2016.07, 한국산업인력공단)</li>
-            </ul>
+        <!-- ===== 경력 ===== -->
+        <section id="experience">
+            <div class="section-head">
+                <span class="section-label">04 · Experience</span>
+                <h2>경력</h2>
+            </div>
+            <div class="timeline">
+                <article class="card timeline-item">
+                    <div class="card-top">
+                        <h3>포메이션랩스(주) <span class="muted">R&amp;D팀</span></h3>
+                        <span class="meta"><time datetime="2022-04">2022.04</time> – <time datetime="2026-01">2026.01</time> · 3년 10개월</span>
+                    </div>
+                    <div class="grid grid-3 inner-grid">
+                        <div class="sub-card">
+                            <h4>창고 관리 시스템(WMS) 운영·유지보수</h4>
+                            <ul>
+                                <li>현장 작업자용 PDA(Android) 및 Web 화면 개발·유지보수</li>
+                                <li>현장 단말기 적용을 위한 Android APK 빌드 및 배포</li>
+                                <li>DB History 테이블 역추적으로 재고 불일치 원인 규명</li>
+                            </ul>
+                        </div>
+                        <div class="sub-card">
+                            <h4>제조 운영 시스템(MES) 운영·유지보수</h4>
+                            <ul>
+                                <li>공구·설비·생산 관리 시스템 DB 초기 세팅 및 Web 화면 개발</li>
+                                <li>GitLab 소스 관리, Jenkins 기반 운영 환경 배포</li>
+                                <li>DB 메일 기능을 활용한 실시간 장애 알림 환경 구축</li>
+                            </ul>
+                        </div>
+                        <div class="sub-card">
+                            <h4>사내 운영 효율화</h4>
+                            <ul>
+                                <li>Obsidian 기반 팀 기술 블로그 구축 및 트러블슈팅 사례 문서화</li>
+                                <li>공통 UI 템플릿 표준화 참여</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
+        <!-- ===== 교육 · 자격증 ===== -->
         <section id="education">
-            <h2>교육</h2>
-            <ul>
-                <li>KT Cloud 클라우드 인프라 과정 (2026.08 – 현재)</li>
-                <li>경남대학교 컴퓨터공학과 졸업 (2013.03 – 2018.02)</li>
-            </ul>
+            <div class="section-head">
+                <span class="section-label">05 · Education</span>
+                <h2>교육 · 자격증</h2>
+            </div>
+            <div class="timeline">
+                <article class="card timeline-item">
+                    <div class="card-top">
+                        <h3>KT Cloud 클라우드 인프라 과정 <span class="muted">Bootcamp</span></h3>
+                        <span class="meta"><time datetime="2026-08">2026.08</time> – 현재</span>
+                    </div>
+                </article>
+                <article class="card timeline-item">
+                    <div class="card-top">
+                        <h3>경남대학교 컴퓨터공학과 <span class="muted">졸업</span></h3>
+                        <span class="meta"><time datetime="2013-03">2013.03</time> – <time datetime="2018-02">2018.02</time></span>
+                    </div>
+                </article>
+                <article class="card timeline-item" id="certifications">
+                    <div class="card-top">
+                        <h3>정보처리기사 <span class="muted">한국산업인력공단</span></h3>
+                        <span class="meta"><time datetime="2016-07">2016.07</time> 취득</span>
+                    </div>
+                </article>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <h2>연락처</h2>
-        <ul>
-            <li>이메일: <a href="mailto:bini_94@naver.com">bini_94@naver.com</a></li>
-            <li>GitHub: <a href="https://github.com/junghyebin">github.com/junghyebin</a></li>
-        </ul>
-        <p>방문자 수: <span id="visitor-count">-</span></p>
+    <!-- ===== 연락처 ===== -->
+    <footer id="contact">
+        <div class="card contact-card">
+            <span class="section-label">06 · Contact</span>
+            <h2>함께 이야기 나눠요</h2>
+            <ul class="contact-links">
+                <li><a href="mailto:bini_94@naver.com">bini_94@naver.com</a></li>
+                <li><a href="https://github.com/junghyebin" target="_blank" rel="noopener">github.com/junghyebin ↗</a></li>
+                <!--<li><a href="https://bini94-tech.tistory.com" target="_blank" rel="noopener">bini94-tech.tistory.com ↗</a></li>-->
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 정혜빈</p>
+            <p>방문자 수: <span id="visitor-count">-</span></p>
+        </div>
     </footer>
 
 </body>
