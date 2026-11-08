@@ -4,243 +4,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="정혜빈 | 인프라·보안 엔지니어 포트폴리오">
+    <meta name="description" content="정혜빈 (Jung Hyebin) | Cloud & Infrastructure Engineer">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>정혜빈 | 포트폴리오</title>
+    <title>정혜빈 | Cloud & Infrastructure Engineer</title>
 </head>
 
 <body>
 
-    <!-- ===== 상단 캡슐형 내비게이션 ===== -->
-    <header class="site-header">
-        <nav class="nav-pill" aria-label="주요 메뉴">
-            <a href="#top" class="nav-logo">HB</a>
-            <ul>
-                <li><a href="#about">소개</a></li>
-                <li><a href="#skills">기술</a></li>
-                <li><a href="#projects">프로젝트</a></li>
-                <li><a href="#experience">경력</a></li>
-                <li><a href="#education">교육</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
-        </nav>
+    <!-- ===== 상단 바 ===== -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a href="#top" class="brand">
+                <span class="brand-mark">HB</span>
+                <span class="brand-name">jung-hyebin</span>
+            </a>
+            <a class="topbar-contact" href="mailto:bini_94@naver.com">Contact</a>
+        </div>
     </header>
 
-    <main id="top">
+    <main id="top" class="container">
 
-        <!-- ===== 히어로 ===== -->
-        <section class="hero">
-            <p class="eyebrow"><span class="status-dot"></span>Infra · Security Engineer</p>
-            <h1>안녕하세요,<br><span class="gradient-text">정혜빈</span>입니다.</h1>
-            <p class="hero-lead">제조 현장 시스템을 개발·운영한 경험을 바탕으로, 안정적이고 안전한 IT 인프라를 만드는 인프라·보안 엔지니어를 준비하고 있습니다.</p>
-            <div class="hero-links">
-                <a class="btn btn-primary" href="https://github.com/junghyebin" target="_blank" rel="noopener">GitHub ↗</a>
-                <!--<a class="btn btn-ghost" href="https://bini94-tech.tistory.com" target="_blank" rel="noopener">Tistory 블로그 ↗</a>-->
-                <a class="btn btn-ghost" href="mailto:bini_94@naver.com">Email</a>
-            </div>
+        <!-- ===== ① Profile / Hero ===== -->
+        <section class="profile" aria-labelledby="profile-name">
+            <p class="chip"><span class="dot"></span>KT Cloud Tech Up Bootcamp 수강 중</p>
+            <h1 id="profile-name">정혜빈 <span class="en-name">Jung Hyebin</span></h1>
+            <p class="role">Cloud &amp; Infrastructure Engineer</p>
+            <p class="summary">제조·물류 현장 시스템 운영 경험 기반의 안정적인 하이브리드 클라우드 &amp; 인프라 엔지니어</p>
+            <ul class="quick-links">
+                <li><a class="btn btn-primary" href="https://github.com/junghyebin" target="_blank" rel="noopener">GitHub ↗</a></li>
+                <li><a class="btn" href="https://bini94-tech.tistory.com" target="_blank" rel="noopener">Tistory ↗</a></li>
+                <li><a class="btn" href="mailto:bini_94@naver.com">bini_94@naver.com</a></li>
+            </ul>
         </section>
 
-        <!-- ===== 소개 ===== -->
-        <section id="about">
-            <div class="section-head">
-                <span class="section-label">01 · About</span>
-                <h2>소개</h2>
-            </div>
-            <div class="grid grid-3">
-                <article class="card card-wide">
-                    <p>WMS(창고관리시스템)와 MES(제조실행시스템)를 3년 10개월간 개발·운영하며, 장애가 생기면 추측보다 로그와 데이터로 원인을 좁혀가는 방식을 익혔습니다.</p>
-                    <p>고객사의 랜섬웨어 사고를 겪으며 보안 사고가 업무 연속성에 주는 영향을 체감했고, IT 환경을 안전하게 지키고 운영하는 일로 전문성을 넓히고 있습니다.</p>
-                </article>
-                <article class="card stat-card">
-                    <p class="stat-num">3<small>년</small> 10<small>개월</small></p>
-                    <p class="stat-label">WMS·MES 개발·운영 경력</p>
-                </article>
-            </div>
-        </section>
+        <!-- ===== 탭 / 필터 ===== -->
+        <nav class="filters" aria-label="정보 필터">
+            <button type="button" class="filter" data-filter="overview" aria-pressed="true">Overview</button>
+            <button type="button" class="filter" data-filter="projects" aria-pressed="false">Projects</button>
+            <button type="button" class="filter" data-filter="experience" aria-pressed="false">Experience</button>
+            <button type="button" class="filter" data-filter="skills" aria-pressed="false">Skills</button>
+            <button type="button" class="filter" data-filter="media" aria-pressed="false">Media</button>
+        </nav>
 
-        <!-- ===== 기술 스택 ===== -->
-        <section id="skills">
-            <div class="section-head">
-                <span class="section-label">02 · Skills</span>
-                <h2>기술 스택</h2>
-            </div>
-            <div class="grid grid-2">
-                <article class="card">
-                    <h3>Cloud &amp; Infra</h3>
-                    <ul class="tags">
-                        <li>AWS</li>
-                        <li>IAM</li>
-                        <li>S3</li>
-                        <li>RDS</li>
-                        <li>Docker</li>
-                        <li>K8s</li>
-                        <li>VMware</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>OS / Server</h3>
-                    <ul class="tags">
-                        <li>Linux</li>
-                        <li>서버 기초</li>
-                        <li>네트워크 기초</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>Language / Framework</h3>
-                    <ul class="tags">
-                        <li>C#</li>
-                        <li>React</li>
-                        <li>DevExtreme</li>
-                        <li>Kotlin (Android)</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>DB / Tools</h3>
-                    <ul class="tags">
-                        <li>MSSQL</li>
-                        <li>GitLab</li>
-                        <li>Jenkins</li>
-                        <li>GitHub</li>
-                        <li>Obsidian</li>
-                    </ul>
-                </article>
-            </div>
-        </section>
+        <!-- ===== 대시보드 그리드 ===== -->
+        <div class="dashboard" id="dashboard">
 
-        <!-- ===== 프로젝트 ===== -->
-        <section id="projects">
-            <div class="section-head">
-                <span class="section-label">03 · Projects</span>
-                <h2>프로젝트</h2>
-            </div>
-            <div class="grid grid-2">
-                <article class="card project-card featured">
-                    <div class="card-top">
-                        <span class="badge">Team · KT Cloud</span>
-                        <span class="meta"><time datetime="2026-10">2026.10</time> 완료</span>
-                    </div>
-                    <h3>Beaver 하이브리드 클라우드 DR 아키텍처</h3>
-                    <p>KT Cloud 기본 프로젝트(팀)로 진행한 하이브리드 재해복구(DR) 인프라 구축 프로젝트입니다.</p>
-                    <p class="muted">상세 내용 추가 예정</p>
-                    <!-- TODO: 역할·기술·성과 상세 추가 -->
-                    <ul class="tags tags-sm">
-                        <li>Hybrid Cloud</li>
-                        <li>DR</li>
-                    </ul>
-                </article>
-                <article class="card project-card featured">
-                    <div class="card-top">
-                        <span class="badge">Personal · AWS</span>
-                        <span class="meta">진행 중</span>
-                    </div>
-                    <h3>Cloud Resume Challenge</h3>
-                    <p>지금 보고 있는 이 이력서 사이트를 AWS 위에 직접 구축하는 프로젝트입니다. 정적 웹사이트 호스팅, HTTPS, 서버리스 방문자 카운터, IaC, CI/CD까지 단계별로 진행하고 있습니다.</p>
-                    <ul class="tags tags-sm">
-                        <li>S3</li>
-                        <li>Serverless</li>
-                        <li>IaC</li>
-                        <li>CI/CD</li>
-                    </ul>
-                </article>
-                <article class="card project-card">
-                    <div class="card-top">
-                        <span class="badge">Hackathon</span>
-                    </div>
-                    <h3>해커톤</h3>
-                    <p class="muted">내용 추가 예정</p>
-                    <!-- TODO: 대회명, 날짜, 만든 것, 역할, 결과 -->
-                </article>
-            </div>
-        </section>
+            <!-- About -->
+            <article class="card span-2" data-cat="overview">
+                <p class="card-label">About</p>
+                <p>WMS(창고관리시스템)와 MES(제조실행시스템)를 3년 10개월간 개발·운영하며, 장애가 생기면 추측보다 로그와 데이터로 원인을 좁혀가는 방식을 익혔습니다.</p>
+                <p class="muted">고객사의 랜섬웨어 사고를 겪으며 보안 사고가 업무 연속성에 주는 영향을 체감했고, IT 환경을 안전하게 지키고 운영하는 일로 전문성을 넓히고 있습니다.</p>
+            </article>
 
-        <!-- ===== 경력 ===== -->
-        <section id="experience">
-            <div class="section-head">
-                <span class="section-label">04 · Experience</span>
-                <h2>경력</h2>
-            </div>
-            <div class="timeline">
-                <article class="card timeline-item">
-                    <div class="card-top">
-                        <h3>포메이션랩스(주) <span class="muted">R&amp;D팀</span></h3>
-                        <span class="meta"><time datetime="2022-04">2022.04</time> – <time datetime="2026-01">2026.01</time> · 3년 10개월</span>
-                    </div>
-                    <div class="grid grid-3 inner-grid">
-                        <div class="sub-card">
-                            <h4>창고 관리 시스템(WMS) 운영·유지보수</h4>
-                            <ul>
-                                <li>현장 작업자용 PDA(Android) 및 Web 화면 개발·유지보수</li>
-                                <li>현장 단말기 적용을 위한 Android APK 빌드 및 배포</li>
-                                <li>DB History 테이블 역추적으로 재고 불일치 원인 규명</li>
-                            </ul>
-                        </div>
-                        <div class="sub-card">
-                            <h4>제조 운영 시스템(MES) 운영·유지보수</h4>
-                            <ul>
-                                <li>공구·설비·생산 관리 시스템 DB 초기 세팅 및 Web 화면 개발</li>
-                                <li>GitLab 소스 관리, Jenkins 기반 운영 환경 배포</li>
-                                <li>DB 메일 기능을 활용한 실시간 장애 알림 환경 구축</li>
-                            </ul>
-                        </div>
-                        <div class="sub-card">
-                            <h4>사내 운영 효율화</h4>
-                            <ul>
-                                <li>Obsidian 기반 팀 기술 블로그 구축 및 트러블슈팅 사례 문서화</li>
-                                <li>공통 UI 템플릿 표준화 참여</li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
+            <!-- Stats -->
+            <article class="card stat" data-cat="overview">
+                <p class="card-label">Experience</p>
+                <p class="stat-num">3y 10m</p>
+                <p class="muted small">제조·물류 현장 시스템(WMS/MES) 개발·운영</p>
+            </article>
 
-        <!-- ===== 교육 · 자격증 ===== -->
-        <section id="education">
-            <div class="section-head">
-                <span class="section-label">05 · Education</span>
-                <h2>교육 · 자격증</h2>
-            </div>
-            <div class="timeline">
-                <article class="card timeline-item">
-                    <div class="card-top">
-                        <h3>KT Cloud 클라우드 인프라 과정 <span class="muted">Bootcamp</span></h3>
-                        <span class="meta"><time datetime="2026-08">2026.08</time> – 현재</span>
-                    </div>
-                </article>
-                <article class="card timeline-item">
-                    <div class="card-top">
-                        <h3>경남대학교 컴퓨터공학과 <span class="muted">졸업</span></h3>
-                        <span class="meta"><time datetime="2013-03">2013.03</time> – <time datetime="2018-02">2018.02</time></span>
-                    </div>
-                </article>
-                <article class="card timeline-item" id="certifications">
-                    <div class="card-top">
-                        <h3>정보처리기사 <span class="muted">한국산업인력공단</span></h3>
-                        <span class="meta"><time datetime="2016-07">2016.07</time> 취득</span>
-                    </div>
-                </article>
-            </div>
-        </section>
+            <!-- ② Projects -->
+            <article class="card is-clickable span-2" data-cat="overview projects">
+                <div class="card-head">
+                    <p class="card-label">Project · Team</p>
+                    <span class="meta">2026.10</span>
+                </div>
+                <h2 class="card-title">
+                    <button type="button" class="card-link" data-modal="modal-beever">Beever 하이브리드 클라우드 DR 아키텍처</button>
+                </h2>
+                <p class="muted">AWS EKS와 온프레미스 VMware를 Tailscale VPN으로 연결한 하이브리드 재해복구(DR) 인프라</p>
+                <ul class="badges">
+                    <li>EKS</li>
+                    <li>VMware</li>
+                    <li>Tailscale</li>
+                    <li>RDS</li>
+                    <li>k6</li>
+                    <li>Grafana</li>
+                </ul>
+                <span class="card-cta" aria-hidden="true">자세히 보기 →</span>
+            </article>
 
+            <article class="card is-clickable" data-cat="overview projects">
+                <div class="card-head">
+                    <p class="card-label">Project · Personal</p>
+                    <span class="meta">진행 중</span>
+                </div>
+                <h2 class="card-title">
+                    <button type="button" class="card-link" data-modal="modal-crc">Cloud Resume Challenge</button>
+                </h2>
+                <p class="muted">지금 보고 있는 이 사이트를 AWS 위에 직접 구축하는 프로젝트</p>
+                <ul class="badges">
+                    <li>S3</li>
+                    <li>CloudFront</li>
+                </ul>
+                <span class="card-cta" aria-hidden="true">자세히 보기 →</span>
+            </article>
+
+            <!-- ③ Experience -->
+            <article class="card is-clickable" data-cat="overview experience">
+                <div class="card-head">
+                    <p class="card-label">Work</p>
+                    <span class="meta">2022.04 – 2026.01</span>
+                </div>
+                <h2 class="card-title">
+                    <button type="button" class="card-link" data-modal="modal-formationlabs">포메이션랩스(주)</button>
+                </h2>
+                <p class="muted">R&amp;D팀 · 3년 10개월 · WMS/MES 개발·운영</p>
+                <span class="card-cta" aria-hidden="true">세부 성과 →</span>
+            </article>
+
+            <article class="card is-clickable" data-cat="overview experience">
+                <div class="card-head">
+                    <p class="card-label">Education</p>
+                    <span class="meta">2026.08 – 현재</span>
+                </div>
+                <h2 class="card-title">
+                    <button type="button" class="card-link" data-modal="modal-ktcloud">KT Cloud Tech Up Bootcamp</button>
+                </h2>
+                <p class="muted">클라우드 인프라 과정 · 하이브리드 DR 팀 프로젝트</p>
+                <span class="card-cta" aria-hidden="true">세부 내용 →</span>
+            </article>
+
+            <article class="card" data-cat="overview experience">
+                <p class="card-label">Education &amp; Certification</p>
+                <ul class="plain-list">
+                    <li>
+                        <strong>경남대학교 컴퓨터공학과</strong>
+                        <span class="meta">2013.03 – 2018.02 · 졸업</span>
+                    </li>
+                    <li>
+                        <strong>정보처리기사</strong>
+                        <span class="meta">2016.07 · 한국산업인력공단</span>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- Skills -->
+            <article class="card span-3" data-cat="overview skills">
+                <p class="card-label">Core Skills</p>
+                <div class="skill-groups">
+                    <div>
+                        <h3>Cloud / Infra</h3>
+                        <ul class="badges">
+                            <li>AWS</li>
+                            <li>EKS</li>
+                            <li>RDS</li>
+                            <li>S3</li>
+                            <li>CloudFront</li>
+                            <li>IAM</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>VMware</li>
+                            <li>Tailscale</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>OS / Server</h3>
+                        <ul class="badges">
+                            <li>Linux</li>
+                            <li>Networking</li>
+                            <li>Prometheus</li>
+                            <li>Grafana</li>
+                            <li>k6</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Dev / DB</h3>
+                        <ul class="badges">
+                            <li>C#</li>
+                            <li>React</li>
+                            <li>DevExtreme</li>
+                            <li>Kotlin</li>
+                            <li>MSSQL</li>
+                            <li>GitLab</li>
+                            <li>Jenkins</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ④ Media & Vlog (플레이스홀더) -->
+            <!-- 영상이 준비되면 .video-thumb 안을 아래처럼 교체하세요:
+                 <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="영상 제목"
+                         allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
+            <article class="card video-card" data-cat="media">
+                <div class="video-thumb">
+                    <span class="play" aria-hidden="true"></span>
+                    <span class="soon">Coming Soon</span>
+                </div>
+                <p class="card-label">Vlog</p>
+                <h2 class="card-title">엔지니어링 브이로그</h2>
+            </article>
+
+            <article class="card video-card" data-cat="media">
+                <div class="video-thumb">
+                    <span class="play" aria-hidden="true"></span>
+                    <span class="soon">Coming Soon</span>
+                </div>
+                <p class="card-label">Demo</p>
+                <h2 class="card-title">Beever DR 페일오버 시연</h2>
+            </article>
+
+            <article class="card video-card" data-cat="media">
+                <div class="video-thumb">
+                    <span class="play" aria-hidden="true"></span>
+                    <span class="soon">Coming Soon</span>
+                </div>
+                <p class="card-label">Build Log</p>
+                <h2 class="card-title">Cloud Resume 구축기</h2>
+            </article>
+
+        </div>
     </main>
 
-    <!-- ===== 연락처 ===== -->
-    <footer id="contact">
-        <div class="card contact-card">
-            <span class="section-label">06 · Contact</span>
-            <h2>함께 이야기 나눠요</h2>
-            <ul class="contact-links">
-                <li><a href="mailto:bini_94@naver.com">bini_94@naver.com</a></li>
-                <li><a href="https://github.com/junghyebin" target="_blank" rel="noopener">github.com/junghyebin ↗</a></li>
-                <!--<li><a href="https://bini94-tech.tistory.com" target="_blank" rel="noopener">bini94-tech.tistory.com ↗</a></li>-->
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 정혜빈</p>
-            <p>방문자 수: <span id="visitor-count">-</span></p>
-        </div>
+    <!-- ===== 푸터 ===== -->
+    <footer class="container footer">
+        <p>© 2026 Jung Hyebin</p>
+        <p>방문자 수 <span id="visitor-count">-</span></p>
     </footer>
+
+    <!-- ================= 모달 ================= -->
+
+    <dialog id="modal-beever" class="modal" aria-labelledby="modal-beever-title">
+        <div class="modal-body">
+            <header class="modal-head">
+                <div>
+                    <p class="card-label">Project · KT Cloud Team · 2026.10</p>
+                    <h2 id="modal-beever-title">Beever 하이브리드 클라우드 DR 아키텍처</h2>
+                </div>
+                <button type="button" class="modal-close" data-close aria-label="닫기">✕</button>
+            </header>
+
+            <div class="arch" aria-label="아키텍처 개요">
+                <div class="arch-node">
+                    <span class="arch-tag">On-Prem</span>
+                    <strong>VMware</strong>
+                </div>
+                <div class="arch-link"><span>Tailscale VPN</span></div>
+                <div class="arch-node accent">
+                    <span class="arch-tag">AWS</span>
+                    <strong>EKS</strong>
+                </div>
+                <div class="arch-link"><span>DB</span></div>
+                <div class="arch-node">
+                    <span class="arch-tag">AWS</span>
+                    <strong>RDS Failover</strong>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>하이브리드 네트워크 연동</h3>
+                <p>AWS EKS 클러스터와 온프레미스 VMware 환경을 Tailscale VPN으로 연결해 두 환경 간 통신 경로를 구성했습니다.</p>
+                <!-- TODO: 구성 방식, 맡은 역할 상세 -->
+            </div>
+            <div class="modal-section">
+                <h3>RDS Failover</h3>
+                <p>장애 상황에서 데이터베이스가 자동으로 전환되도록 RDS Failover를 구성하고 검증했습니다.</p>
+                <!-- TODO: 전환 시간, 검증 시나리오 -->
+            </div>
+            <div class="modal-section">
+                <h3>스트레스 테스트</h3>
+                <p>k6로 부하를 발생시키고 Prometheus·Grafana로 지표를 수집·시각화해 시스템의 한계와 병목을 확인했습니다.</p>
+                <dl class="metrics">
+                    <div><dt>테스트 도구</dt><dd>k6</dd></div>
+                    <div><dt>모니터링</dt><dd>Prometheus · Grafana</dd></div>
+                    <div><dt>결과</dt><dd class="muted">추가 예정</dd></div>
+                    <!-- TODO: VU 수, RPS, p95 응답시간, 에러율 등 실제 결과 -->
+                </dl>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-crc" class="modal" aria-labelledby="modal-crc-title">
+        <div class="modal-body">
+            <header class="modal-head">
+                <div>
+                    <p class="card-label">Project · Personal · 진행 중</p>
+                    <h2 id="modal-crc-title">Cloud Resume Challenge</h2>
+                </div>
+                <button type="button" class="modal-close" data-close aria-label="닫기">✕</button>
+            </header>
+
+            <div class="arch" aria-label="아키텍처 개요">
+                <div class="arch-node">
+                    <span class="arch-tag">User</span>
+                    <strong>Browser</strong>
+                </div>
+                <div class="arch-link"><span>HTTPS</span></div>
+                <div class="arch-node accent">
+                    <span class="arch-tag">CDN</span>
+                    <strong>CloudFront</strong>
+                </div>
+                <div class="arch-link"><span>Origin</span></div>
+                <div class="arch-node">
+                    <span class="arch-tag">Storage</span>
+                    <strong>S3</strong>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3>개요</h3>
+                <p>지금 보고 있는 이 이력서 사이트를 AWS S3와 CloudFront로 직접 배포하는 프로젝트입니다. 정적 웹사이트 호스팅부터 HTTPS, 서버리스 방문자 카운터, IaC, CI/CD까지 단계별로 진행하고 있습니다.</p>
+            </div>
+            <div class="modal-section">
+                <h3>구축 단계</h3>
+                <ol class="steps">
+                    <li><strong>HTML / CSS</strong> 이력서 페이지 작성</li>
+                    <li><strong>S3</strong> 정적 웹사이트 호스팅</li>
+                    <li><strong>CloudFront</strong> CDN 배포 및 HTTPS 적용</li>
+                    <li><strong>서버리스 방문자 카운터</strong> 구현</li>
+                    <li><strong>IaC · CI/CD</strong> 인프라 코드화 및 자동 배포</li>
+                </ol>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-formationlabs" class="modal" aria-labelledby="modal-fl-title">
+        <div class="modal-body">
+            <header class="modal-head">
+                <div>
+                    <p class="card-label">Work · 2022.04 – 2026.01 · 3년 10개월</p>
+                    <h2 id="modal-fl-title">포메이션랩스(주) R&amp;D팀</h2>
+                </div>
+                <button type="button" class="modal-close" data-close aria-label="닫기">✕</button>
+            </header>
+            <div class="modal-section">
+                <h3>창고 관리 시스템(WMS) 운영·유지보수</h3>
+                <ul>
+                    <li>현장 작업자용 PDA(Android) 및 Web 화면 개발·유지보수</li>
+                    <li>현장 단말기 적용을 위한 Android APK 빌드 및 배포</li>
+                    <li>DB History 테이블 역추적으로 재고 불일치 원인 규명</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h3>제조 운영 시스템(MES) 운영·유지보수</h3>
+                <ul>
+                    <li>공구·설비·생산 관리 시스템 DB 초기 세팅 및 Web 화면 개발</li>
+                    <li>GitLab 소스 관리, Jenkins 기반 운영 환경 배포</li>
+                    <li>DB 메일 기능을 활용한 실시간 장애 알림 환경 구축</li>
+                </ul>
+            </div>
+            <div class="modal-section">
+                <h3>사내 운영 효율화</h3>
+                <ul>
+                    <li>Obsidian 기반 팀 기술 블로그 구축 및 트러블슈팅 사례 문서화</li>
+                    <li>공통 UI 템플릿 표준화 참여</li>
+                </ul>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="modal-ktcloud" class="modal" aria-labelledby="modal-kt-title">
+        <div class="modal-body">
+            <header class="modal-head">
+                <div>
+                    <p class="card-label">Education · 2026.08 – 현재</p>
+                    <h2 id="modal-kt-title">KT Cloud Tech Up Bootcamp</h2>
+                </div>
+                <button type="button" class="modal-close" data-close aria-label="닫기">✕</button>
+            </header>
+            <div class="modal-section">
+                <h3>클라우드 인프라 과정</h3>
+                <p>클라우드 인프라 설계·구축·운영 전반을 학습하고 있습니다.</p>
+                <!-- TODO: 주요 학습 내용 -->
+            </div>
+            <div class="modal-section">
+                <h3>팀 프로젝트</h3>
+                <ul>
+                    <li>Beever 하이브리드 클라우드 DR 아키텍처 구축 (2026.10 완료)</li>
+                </ul>
+                <button type="button" class="btn btn-sm" data-modal="modal-beever">프로젝트 상세 보기 →</button>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- ================= 스크립트: 필터 · 모달 ================= -->
+    <script>
+        (function () {
+            // ----- 탭 / 필터 -----
+            var filters = document.querySelectorAll('.filter');
+            var cards = document.querySelectorAll('[data-cat]');
+
+            function applyFilter(cat) {
+                filters.forEach(function (f) {
+                    f.setAttribute('aria-pressed', String(f.dataset.filter === cat));
+                });
+                cards.forEach(function (card) {
+                    card.hidden = card.dataset.cat.split(' ').indexOf(cat) === -1;
+                });
+            }
+
+            filters.forEach(function (f) {
+                f.addEventListener('click', function () { applyFilter(f.dataset.filter); });
+            });
+            applyFilter('overview');
+
+            // ----- 모달 -----
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+            function closeModal(dialog) {
+                if (!dialog.open || dialog.classList.contains('closing')) return;
+                if (reduceMotion.matches) { dialog.close(); return; }
+                dialog.classList.add('closing');
+                dialog.addEventListener('animationend', function () {
+                    dialog.classList.remove('closing');
+                    dialog.close();
+                }, { once: true });
+            }
+
+            document.addEventListener('click', function (e) {
+                var opener = e.target.closest('[data-modal]');
+                if (opener) {
+                    var openDialog = document.querySelector('dialog[open]');
+                    if (openDialog) openDialog.close();
+                    document.getElementById(opener.dataset.modal).showModal();
+                    return;
+                }
+                if (e.target.closest('[data-close]')) {
+                    closeModal(e.target.closest('dialog'));
+                    return;
+                }
+                // 모달 바깥(배경) 클릭 시 닫기
+                if (e.target.tagName === 'DIALOG') closeModal(e.target);
+            });
+
+            // Esc 키도 페이드아웃 후 닫기
+            document.querySelectorAll('dialog').forEach(function (d) {
+                d.addEventListener('cancel', function (e) {
+                    e.preventDefault();
+                    closeModal(d);
+                });
+            });
+        })();
+    </script>
 
 </body>
 
