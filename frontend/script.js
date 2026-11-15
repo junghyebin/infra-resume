@@ -1,7 +1,7 @@
 // ===== 방문자 수 카운터 =====
 // S08~10에서 API를 만들면 아래 API_URL에 실제 주소를 넣으세요.
 // 비어 있으면 임시(mock) 모드로 동작합니다.
-const API_URL = "";
+const API_URL = "https://dka1na1owe.execute-api.ap-northeast-2.amazonaws.com/count";
 
 const countEl = document.getElementById("visitor-count");
 
@@ -20,7 +20,7 @@ function getMockCount() {
 
 // 실제 모드: API를 호출해서 { "count": 숫자 } 형태의 응답을 받음
 async function getApiCount() {
-  const response = await fetch(API_URL, { method: "POST" });
+  const response = await fetch(API_URL, { method: "GET" });
   if (!response.ok) {
     throw new Error(`API 응답 오류: ${response.status}`);
   }
